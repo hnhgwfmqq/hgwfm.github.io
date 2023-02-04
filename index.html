@@ -1,6 +1,23 @@
 Hello 大家好<br>
-我是运维小铺，这是我的个人网站。 <br>
-很高兴你来到这里, 下边是需要用到的一键安装命令<br>
+我是运维小铺，下边是需要用到的命令<br>
+复制相应代码后，粘贴到termux命令窗口中回车执行<br>
 <br>
-复制倍代码，粘贴到termux命令窗口中回车执行<br>
+一键安装alist的命令<br>
 pkg install alist && echo 'alist server &' >> ~/.bashrc && alist admin && alist server
+<br>
+<br>
+<br>
+如果一键安装alist不成功，则需要进行换源操作<br>
+<br>
+一键换源命令<br>
+sed -i 's@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@' $PREFIX/etc/apt/sources.list
+<br>
+sed -i 's@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@' $PREFIX/etc/apt/sources.list.d/game.list
+<br>
+sed -i 's@^\(deb.*science stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@' $PREFIX/etc/apt/sources.list.d/science.list
+<br>
+pkg update
+<br>
+上述命令，一次复制粘贴执行！<br>
+
+换源完成后，再次执行一键安装alist的命令<br>
