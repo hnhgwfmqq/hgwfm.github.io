@@ -10,6 +10,7 @@ pkg install alist && echo 'alist server &' >> ~/.bashrc && alist admin && alist 
 如果一键安装alist不成功，则需要进行换源操作<br>
 <br>
 一键换源命令<br>
+<br>
 sed -i 's@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@' $PREFIX/etc/apt/sources.list
 <br>
 sed -i 's@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@' $PREFIX/etc/apt/sources.list.d/game.list
@@ -17,6 +18,7 @@ sed -i 's@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/
 sed -i 's@^\(deb.*science stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@' $PREFIX/etc/apt/sources.list.d/science.list
 <br>
 pkg update
+<br>
 <br>
 上述命令，一次复制粘贴执行！<br>
 
