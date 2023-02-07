@@ -31,3 +31,42 @@ pkg update
 换源完成后，再次执行一键安装alist的命令<br>
 <br>
 祝您成功！
+<br>
+————————————————————<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+苹果移动终端安装ISH模拟器后，需要安装APK的命令<br>
+<br>
+# 下载<br>
+wget -qO- http://mirrors.aliyun.com/alpine/v3.12/main/x86/apk-tools-static-2.10.5-r1.apk | tar -xz sbin/apk.static
+<br>
+# 安装<br>
+./sbin/apk.static add apk-tools && rm sbin/apk.static && rmdir sbin 2> /dev/null
+<br>
+<br>
+<br>
+<br>
+苹果系统APK安装完成后，再次执行一键安装alist的命令<br>
+<br>
+<br>
+pkg install alist && echo 'alist server &' >> ~/.bashrc && alist admin && alist server
+<br>
+<br>
+祝您成功！
+
+
+
+
+
+
+
+
+
+
+
+
+
+
